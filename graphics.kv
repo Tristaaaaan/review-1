@@ -1,0 +1,101 @@
+<IntroScreen>:
+    name: "intro"
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+
+    MDLabel:
+        text: "Welcome to the app"
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 0, 0, 0, 1
+        font_style: "H2"
+
+    AsyncImage:
+        source: 'background_logo.png'
+        keep_ratio:True
+        allow_stretch:False
+        size_hint_y: None
+        height: 54
+        pos_hint: {'top':1}
+        elevation:8
+
+
+    MDRaisedButton:
+        text: "Restart"
+        text_color: 147/255.0, 147/255.0 , 147/255.0, 1
+        md_bg_color: (87 / 255.0, 36 / 255.0, 123 / 255.0, 1)
+        elevation: 3
+        line_width: 0.00001
+        pos_hint:{'center_x': 0.5, 'center_y': 0.30}
+        on_press: root.manager.current = "game"
+
+
+<GameScreen>:
+    name: "game"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+
+
+
+    MDLabel:
+        text: "Game"
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 0, 0, 0, 1
+        font_style: "H2"
+
+
+    AsyncImage:
+        source:'background_logo.png'
+        keep_ratio:True
+        allow_stretch:False
+        size_hint_y: None
+        height: 54
+        pos_hint: {'top':1}
+        elevation:8
+
+    MDRaisedButton:
+        text: "Restart"
+        text_color: 147/255.0, 147/255.0 , 147/255.0, 1
+        md_bg_color: (87 / 255.0, 36 / 255.0, 123 / 255.0, 1)
+        elevation: 3
+        line_width: 0.00001
+        pos_hint:{'center_x': 0.5, 'center_y': 0.30}
+        on_press: root.manager.current = "end"
+
+
+<EndScreen>:
+    name: "end"
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+
+
+    MDLabel:
+        text: "End"
+        halign: "center"
+        theme_text_color: "Custom"
+        text_color: 0, 0, 0, 1
+        font_style: "H2"
+    
+    AsyncImage:
+        source: 'background_logo.png'
+        keep_ratio:True
+        allow_stretch:False
+        size_hint_y: None
+        height: 54
+        pos_hint: {'top':1}
+        elevation:8
+
+
+    MDRaisedButton:
+        text: "Restart"
+        text_color: 147/255.0, 147/255.0 , 147/255.0, 1
+        md_bg_color: (87 / 255.0, 36 / 255.0, 123 / 255.0, 1)
+        elevation: 3
+        line_width: 0.00001
+        pos_hint:{'center_x': 0.5, 'center_y': 0.30}
+        on_press: root.manager.current = "intro"
